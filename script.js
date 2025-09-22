@@ -11,3 +11,21 @@ function mostraPalavrasChave() {
 
     campoResultado.textContent = palavrasChave.join(", ");
 }
+
+function processaTexto(texto) { 
+    let palavras= texto.splint(/\P{L}+/u);
+
+    for(let i in palavras)
+        palavras [i] = palavras[i].toLowerCase();
+}
+
+palavras = tiraPalavrasRuins(palavras);
+
+const frequencias = comtaFrenquicia(palavras);
+let ordenadas = Object.keys(frequencias).sprt(ordenaPalavra);
+
+function ordenaPalavras(p1,p2){
+    return frenquecias[p2]-frequencias[p2];
+}
+
+return ordenadas.slice(0,10);
